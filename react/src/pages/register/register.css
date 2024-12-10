@@ -1,0 +1,143 @@
+/* Estilos generales */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle, #a1c4fd, #c2e9fb);
+    overflow-x: hidden;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(18, 177, 209, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 16px rgba(18, 177, 209, 0.5);
+    }
+}
+
+/* Contenedor principal */
+.register-container {
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 30px;
+    background: linear-gradient(145deg, #ffffff, #f0f5ff);
+    border-radius: 20px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto decorativo en el fondo */
+.register-container::before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: -50%;
+    left: -100%;
+    background: radial-gradient(circle, rgba(255, 204, 204, 0.5), transparent);
+    z-index: -1;
+    animation: glow 3s infinite alternate;
+}
+
+/* Encabezado */
+.heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #1089d3;
+    margin-bottom: 20px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Formulario */
+.form {
+    margin-top: 20px;
+}
+
+/* Inputs con diseño moderno */
+.form .input {
+    width: 100%;
+    padding: 15px 20px;
+    margin: 15px 0;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    background: #f9f9f9;
+    color: #333; /* Color del texto principal */
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form .input:focus {
+    border-color: #1089d3;
+    background: #fff; /* Fondo blanco al enfocar */
+    color: #1089d3; /* Color del texto contrastante */
+    box-shadow: 0 4px 15px rgba(16, 137, 211, 0.3);
+}
+
+.form .input::placeholder {
+    color: #aaa;
+}
+
+/* Botón */
+.register-button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+  }
+  
+  .register-button:active {
+    transform: scale(0.95);
+    box-shadow: 0 0 10px rgba(106, 17, 203, 0.5);
+  }
+/* Responsividad */
+@media (max-width: 768px) {
+    .register-container {
+        padding: 20px;
+        margin: 30px;
+    }
+
+    .heading {
+        font-size: 26px;
+    }
+
+    .form .input {
+        padding: 12px;
+    }
+
+    .register-button {
+        padding: 12px;
+    }
+}

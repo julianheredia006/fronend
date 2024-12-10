@@ -1,0 +1,105 @@
+/* Fondo degradado dinámico */
+.fondo {
+    min-height: 100vh; /* Asegura que ocupe al menos la altura de la pantalla */
+    padding: 70px 20px 70px; /* Respeta el espacio del navbar y footer */
+    background: linear-gradient(120deg, #89f7fe, #A3E4D7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Incluye padding en el cálculo del tamaño del elemento */
+  }
+  
+
+/* Contenedor del formulario */
+.formulario-contenedor {
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Título del formulario */
+.formulario-titulo {
+  font-size: 1.8em;
+  color: #4a90e2;
+  font-weight: bold;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Estilo de los grupos de entrada */
+.formulario-grupo {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Etiquetas del formulario */
+.formulario-label {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+/* Campos de texto */
+.formulario-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #4a90e2;
+  border-radius: 5px;
+  font-size: 1em;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.formulario-input:focus {
+  border-color: #66a6ff;
+  box-shadow: 0 0 10px rgba(102, 166, 255, 0.3);
+}
+
+/* Botón de enviar */
+.formulario-boton {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(120deg, #66a6ff, #89f7fe);
+  border: none;
+  border-radius: 30px;
+  font-size: 1em;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.formulario-boton:hover {
+  background: linear-gradient(120deg, #89f7fe, #4a90e2);
+  box-shadow: 0 10px 20px rgba(72, 144, 226, 0.3);
+  transform: scale(1.05);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 480px) {
+  .formulario-contenedor {
+    padding: 20px;
+  }
+
+  .formulario-titulo {
+    font-size: 1.5em;
+  }
+}

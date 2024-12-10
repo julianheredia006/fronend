@@ -1,0 +1,112 @@
+/* homeparamedico.css */
+
+/* Fondo dinámico */
+.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    animation: backgroundAnimation 6s infinite alternate;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Tarjeta de bienvenida */
+  .welcome-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .welcome-message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .mapa-button {
+    background: #0072ff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 114, 255, 0.5);
+  }
+  
+  .mapa-button:hover {
+    background: #00c6ff;
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 198, 255, 0.6);
+  }
+  
+  /* Sección de emergencia */
+  .emergency-section {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .emergency-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Sirena animada con imágenes */
+  .siren-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .siren-image {
+    width: 100px; /* Ajusta el tamaño según necesites */
+    height: 100px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    animation: sirenAnimation 2s infinite alternate; /* Tiempo de 2 segundos para una transición más suave */
+  }
+  
+  @keyframes sirenAnimation {
+    0%, 100% {
+      background-image: url('../../assets/images/siren-blue.png'); /* Imagen azul */
+    }
+    50% {
+      background-image: url('../../assets/images/siren-red.png'); /* Imagen roja */
+    }
+  }
+  
+  /* Fondo dinámico */
+  @keyframes backgroundAnimation {
+    0% {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
+    100% {
+      background: linear-gradient(135deg, #9142be, #30d689);
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  

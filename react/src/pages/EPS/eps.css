@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fffffa;
+  font-family: 'Poppins', sans-serif;
+  display: block;
+}
+
+.bg-primary {
+  background-color: #A3E4D7 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+header {
+  width: 100%;
+  background: #F4F9F3;
+  margin-bottom: 20px;
+}
+
+header .logo {
+  float: left;
+}
+
+header nav {
+  float: right;
+}
+
+header nav a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 500ms ease;
+}
+
+header nav a:hover {
+  background: #A3E4D7;
+  border-radius: 40px;
+}
+
+.topheader {
+  width: 100%;
+  background: #A3E4D7;
+}
+
+.topheader nav a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  padding: 1px 15px;
+  font-size: 15px;
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: #bed1ca;
+}
+
+.pie-pagina .grupo-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: #A3E4D7;
+  padding: 1px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  header nav a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .pie-pagina .grupo-1 {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+  }
+}
